@@ -1,0 +1,95 @@
+<!Doctype html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Demo</title>
+<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+<script>
+//window.onscroll = function()(myfunction());
+document.getElementById("bodyContainer").addEventListener("scroll",myfunction);
+function myfunction(){
+	document.getElementById("cdata").innerHTML="afterParallaxEffect";
+	if(document.body.scrollTop>100||document.documentElement.scrollTop>100)
+	{
+		document.getElementById("parallaxDiv").className="afterParallaxEffect";
+		document.getElementById("cdata").innerHTML="afterParallaxEffect";
+	}
+}
+
+
+function loadDoc(){
+	var xhttp;
+	//document.getElementById("cdata").innerHTML = "Inside loaddoc";
+	if(window.XMLHttpRequest){
+		xhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xhttp.onreadystatechange = function(){
+		if(this.readyState==4 && this.status == 200){
+			document.getElementById("cdata").innerHTML = this.responseText;
+		}
+		else{
+			document.getElementById("cdata").innerHTML = ""+this.readyState;
+		}
+	};
+	xhttp.open("GET","hello.txt",true);
+	xhttp.send();
+	//document.getElementById("cdata").innerHTML = ""+this.readyState;
+}
+
+
+</script>
+
+</head>
+<body style="background-color: #f1f1f1; opacity: 1;margin:0;">
+<div id="bodyContainer">
+	<!--<header>
+	<div id="WName">Silver Moon</div>
+	<div id="CallDiv">
+		<p></p>
+	</div>	
+
+	</header>-->
+
+	<header>
+
+	<div id="WName"><img src="images/silvermoonlogo.png" alt="logo"></div>
+	<nav id="nHead">
+		<ul>
+		<li><a href="">Our Beer</a></li>
+		<li><a href="">Our Pub</a></li>
+		<li><a href="">Brewery</a></li>
+		<li>	<div id="SearchContainer"><input type="search" width="50" height="50" name="searchBox" placeholder="Search" /></div></li>
+		</ul>
+	</nav>
+	<div id="stars"></div>
+	<div id="parallaxDiv"></div>
+	</header>
+	<div id="mContent"></div>
+	<div id="oContent">
+	<section id="LsideBar">
+		<img src="images/mj.jpg" width="500px" alt="sidebarImage"/>
+	</section>
+	<section id="MBar" >
+		<div id="cdata"><p>Silver Moon Brewery has a profound history with Bend, Oregon. What started as Bend’s first brew shop evolved into Bend’s 3rd local brewery and tasting room, as well as the only brewery that doubled as a speakeasy.</p>
+
+		<p>As residents of Bend know, friendships are born at brew events. It was at a craft beer event in 2009 that former owner Tyler Reichart met Matt Barrett and James Watts. Over time, an idea was planted and formulated. Soon after, Matt and James turned a small dream to solid reality by becoming the new owners of Silver Moon Brewery.</p>
+
+<p>Matt and James plan to honor the grounded roots of Silver Moon by continuing to brew extraordinary beer, hosting local music, and celebrating the people that made the pub what it is today.</p>
+
+<p>The duo took over the brewery in July 2013, bringing with them a branding which signifies the new lunar phase in Silver Moon’s journey. And while Matt and James are planning a modest remodel of the taproom, they will keep the music scene alive as well as continue to explore the art of craft brewing. They are also excited to give back to the community by being involved in local non-profits. </p>
+
+<p>Silver Moon Brewing would love to thank all of our fans, followers, hop enthusiasts, and beer eccentrics alike. You are the reason we keep on brewing.</p>
+<input type="submit" id="b1" onclick="loadDoc()" value="Change"/></div></section>	
+
+	<footer style="position:absolute; float:left; top:500px;">
+	<div class="footer-art>">
+	<!--<img id="footImage" src="footer-all-three-image.png" alt="Footer"/> -->
+	</div>
+	</footer>
+</div>
+</div>
+</body>
+</html>

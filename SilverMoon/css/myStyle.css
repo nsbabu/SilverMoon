@@ -1,0 +1,220 @@
+
+#bodyContainer{
+	position:relative;
+	margin-left: 0;
+	
+}
+header
+{
+/*	background-color: #20B2AA; 
+	padding: 25px 50px 75px 100px; */
+/*	color: #FFFFFF; */	
+	position:static;
+	top:0;
+	left:0;
+	z-index:9999;
+	width:100%;
+	/*background-image: url('yellow-stars.jpg');*/
+	
+	background-color: #000;
+	background-repeat: repeat-x;
+	overflow:auto;
+
+}
+#stars{
+	position:relative;
+	
+	left:0;
+	height:100px;
+	width:100%;
+	z-index: 9999;
+	background-image: url('../images/yellow-stars.jpg');
+	
+	background-color: #000;
+	background-repeat: repeat-x;
+	
+	 /* Chrome, Safari, Opera */
+    -webkit-animation-name: moveit;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: 2;
+    -webkit-animation-direction: alternate;
+    /* Standard syntax */
+    animation-name: moveit;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+
+    /* Chrome, Safari, Opera */
+	@-webkit-keyframes moveit {
+    from {left: 0;}
+    to {left: 50%;}
+	}
+ 
+/* Standard syntax */
+	@keyframes moveit {
+    from {left: 0;}
+    to {left: 50%;}
+}
+
+}
+ 
+ 
+
+
+
+#parallaxDiv{
+	width:100%;
+	height:500px;
+	background: url('../images/blue-mountain.png');
+	background-position: 100px 110px; 
+	background-size: cover;
+	background-attachment: fixed;
+	position:relative;
+}
+#WName{
+	float:left;
+	padding-left:70px;
+	padding-top:5px;
+	padding-bottom: 0px;
+	width:400px;
+	height:200px;
+	
+	color:white;
+
+}
+#CallDiv{
+float:right;
+top:10px;
+
+font-size: 18pt;
+width:500px;
+
+color: #FFFFFF;
+
+/*margin-top:20px;
+*/
+}
+#SearchContainer{
+float:left;
+line-height: 1.5em;
+padding-top: 10px;
+padding-bottom:10px;
+width:300px;
+font-size: 18pt;
+
+}
+#con{
+	width:500px;
+	border:2px solid;
+	padding:20px;
+
+}
+#nHead{
+	height:100px;
+}
+
+ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+
+	font-size: 20pt;
+	/*background-color:#333; */
+}
+li{
+	float:right;
+	padding-left: 50px;
+	
+}
+li a {
+	display:block;
+	color:white;
+	text-align: center;
+
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover
+{
+	background-image: url('../images/yellow-menu-rollover.png');
+	background-position: center;
+}
+
+#mContent{
+	/*background-color: #f1f1f1;
+	width: 100%;
+	height:500px;
+	border-radius: 50% 50% 0 0;
+	position:absolute;
+	top:500px;*/
+
+	position:absolute;
+	left:50%;
+	right:0;
+	top:600px;
+	width:140%;
+	height:350px;
+	border: 2px solid #fff;
+	border-bottom: none;
+	border-top-left-radius: 50% 40%;
+	border-top-right-radius: 50% 40%;
+	transform: translateX(-50%);
+	background:#f1f1f1;
+	transition:all 1.75s;
+	
+}
+#oContent{
+	background-color: #f1f1f1;
+}
+#LsideBar{
+	position: relative;
+	padding:50px;
+	width:500px;
+	background-color: #f1f1f1;
+	float:left;
+}
+#MBar{
+	float:left;
+	padding:33px;
+	width:500px;
+	background-color: #f1f1f1;
+	position: relative;
+}
+#lbar{
+	float:right;
+	background-color: #f1f1f1;
+}
+.footer-art{
+/*	width:500px;
+	height:200px;
+	float:left;
+	
+	background-image: url('footer-active-image.png');  */
+}
+#footImage
+{
+	float: bottom;
+	height:300px;
+	margin:0;
+	padding:0;
+	width:100%;	
+}
+
+.afterParallaxEffect
+{
+	position:static;
+	-webkit-animation-name: aft;
+	-webkit-animation-duratin: 2s;
+	animation-name:aft;
+	animation-duration: 5s;
+
+}
+@-webkit-keyframes aft{
+	from{left:0;}
+	to{left:100%;}
+}
+@keyframes aft{
+	from{left:0;}
+	to{left:100%;}
+}
